@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Create zip
+        run: cd mod && zip -r "../Simple-PlayStation-Icons-MKW.zip" "Simple PlayStation Icons"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Simple-PlayStation-Icons-MKW.zip
+          body: |
+            ## Installation
+
+            ### For [Eglantine](https://github.com/Djihads80/Eglantine) Emulator
+            1. Download `Simple-PlayStation-Icons-MKW.zip` below
+            2. Right-click the game → **Configure Game** → **Add-Ons** tab
+            3. Click **Import Mod from ZIP** and select the downloaded ZIP
+            4. Enable the mod and launch the game
+
+            <!-- ## Changelog
+            -  -->
+          draft: false
+          prerelease: false
