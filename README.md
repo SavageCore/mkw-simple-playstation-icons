@@ -24,7 +24,7 @@ Prefer Xbox buttons? See [mkw-simple-xbox-icons](https://github.com/SavageCore/m
 
 ## Download
 
-- 🍌 **GameBanana** _(primary)_ - TBD
+- 🍌 **[GameBanana](https://gamebanana.com/mods/735706)** _(primary)_
 - 📦 **[GitHub Releases](https://github.com/SavageCore/mkw-simple-playstation-icons/releases)**
 
 ## Installation (Eglantine)
